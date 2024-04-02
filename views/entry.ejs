@@ -1,8 +1,11 @@
 <%- include("./partials/header") %>
 
 <h1>Recorde</h1>
-    <form action="">
-        <input type="text" placeholder="ENTRY">
+    <form action="/create" method="post">
+        <input type="text" placeholder="enter book name" name="name"> <br><br>
+        <input type="text" placeholder="auther name" name="auther"> <br><br>
+        <input type="text" placeholder="price" name="price"> <br><br>
+        <button>add book</button>
     </form>
 
 <%- include("./partials/footer") %>

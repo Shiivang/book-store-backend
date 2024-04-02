@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const BOOKS = []
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -12,9 +14,15 @@ router.get("/create" , (req,res)=>{
 });
 
 
-router.get("/readall" , (req,res)=>{
-  res.render("library");
+router.post("/create" , (req,res)=>{
+  BOOKS.push(req.body);
+  res.redirect("/readall")
 });
+
+
+router.get("/readall" , (req,res)=>{
+  res.render("library", { books : BOOKS} );
+}); 
 
 
 router.get("/about" , (req,res)=>{
