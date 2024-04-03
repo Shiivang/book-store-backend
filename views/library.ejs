@@ -1,10 +1,17 @@
 <%- include("./partials/header") %>
 
 <h1>Library</h1>
+<hr>
+<br><br>
 
-<% books.forEach(function(book){%>
+<% books.forEach(function(book,index){%>
 
-    <p><%= book.name %></p>
+    <h2><%= book.name %></h2>
+   
+    <p><%= book.auther%></p>
+    <a href="/delete/<%= index %>">delete BOOK</a>
+    <a href="/update/<%= index %>">update BOOk</a>
+    <hr>
 
 <%}) %>
 

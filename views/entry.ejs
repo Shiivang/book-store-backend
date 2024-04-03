@@ -1,11 +1,24 @@
 <%- include("./partials/header") %>
 
 <h1>Recorde</h1>
-    <form action="/create" method="post">
+    <!-- <form action="/create" method="post">
         <input type="text" placeholder="enter book name" name="name"> <br><br>
         <input type="text" placeholder="auther name" name="auther"> <br><br>
         <input type="text" placeholder="price" name="price"> <br><br>
         <button>add book</button>
-    </form>
+    </form> -->
+
+    <form action="/create" method="post" class="text-center ">
+        <div  class="mb-3 m-auto ">
+          <label for="enter book name" class="form-label">enter book name</label>
+          <input  type="text" class="form-control w-50 m-auto " name="name" >
+
+          <label for="auther name" class="form-label">auther name</label>
+          <input  type="text" class="form-control w-50 m-auto " name="auther" >
+        </div>
+        
+       
+        <button type="submit" class="btn btn-primary ">add book</button>
+      </form>
 
 <%- include("./partials/footer") %>

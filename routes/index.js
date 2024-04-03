@@ -25,6 +25,14 @@ router.get("/readall" , (req,res)=>{
 }); 
 
 
+router.get("/delete/:index" , (req,res)=>{
+  BOOKS.splice(req.params.index,1);
+  res.redirect("/readall");
+}); 
+
+
+
+
 router.get("/about" , (req,res)=>{
   res.render("aboutus");
 });
