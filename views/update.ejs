@@ -1,6 +1,6 @@
 <%- include("./partials/header") %>
 
-<h1 class="text-center my-3 text-uppercase fw-bold">Records</h1>
+<h1 class="text-center my-3 text-uppercase fw-bold">Update</h1>
     <!-- <form action="/create" method="post">
         <input type="text" placeholder="enter book name" name="name"> <br><br>
         <input type="text" placeholder="auther name" name="auther"> <br><br>
@@ -8,13 +8,17 @@
         <button>add book</button>
     </form> -->
 
-    <form action="/create" method="post" class="text-center w-50 m-auto p-5 rounded bg-secondary">
+    
+
+    <form action="/update" method="post" class="text-center w-50 m-auto p-5 rounded bg-secondary">
         <div  class="mb-3 m-auto ">
 
-          <label for="enter book name" class="form-label">enter book name</label>
+          <label for="enter book name" class="form-label">book name</label>
           <input
           class="form-control form-control m-auto w-50"
           type="text"
+          placeholder=""
+          value="<%= book.name %>"
           name="name"
       />
   
@@ -65,7 +69,9 @@
         </div>
         
        
-        <button type="submit" class="btn btn-primary ">add book</button>
+        <button type="submit" class="btn btn-primary ">Update book</button>
       </form>
+
+      
 
 <%- include("./partials/footer") %>

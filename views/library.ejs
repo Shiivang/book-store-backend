@@ -1,18 +1,27 @@
 <%- include("./partials/header") %>
 
-<h1>Library</h1>
+<h1  class="text-center my-3 text-uppercase fw-bold">Library</h1>
 <hr>
 <br><br>
 
 <% books.forEach(function(book,index){%>
 
-    <h2><%= book.name %></h2>
    
-    <p><%= book.auther%></p>
-    <a href="/delete/<%= index %>">delete BOOK</a>
-    <a href="/update/<%= index %>">update BOOk</a>
-    <hr>
 
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title"><%= book.name %></h5>
+          <p class="card-text"><%= book.author %></p>
+          <br><br>
+          <p class="card-text"><%= book.description %></p>
+          <a href="/delete/<%= index %>" class="btn btn-primary">delete BOOK</a>
+          <a href="/update/<%= index %>" class="btn btn-primary">update BOOk</a>
+        </div>
+    
+  </div>
+
+
+  
 <%}) %>
 
 <%- include("./partials/footer") %>

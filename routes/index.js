@@ -31,6 +31,16 @@ router.get("/delete/:index" , (req,res)=>{
 }); 
 
 
+router.get("/update/:index" , (req,res)=>{
+  // BOOKS.push(req.params.index,1);
+  // const data =  BOOKS.splice(req.params.index,1)
+  const i = req.params.index ;
+
+  const b = BOOKS[i];
+  res.render("update" , { book : b , index : i});
+}); 
+
+
 
 
 router.get("/about" , (req,res)=>{
