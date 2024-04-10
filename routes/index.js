@@ -42,10 +42,21 @@ router.get("/update/:index" , (req,res)=>{
 
 
 
+router.post("/update/:index" , (req,res)=>{
+  // BOOKS.push(req.params.index,1);
+  // const data =  BOOKS.splice(req.params.index,1)
+  const i = req.params.index ;
+
+  BOOKS[i] = req.body; 
+  res.redirect("/readall");
+}); 
+
+
+
 
 router.get("/about" , (req,res)=>{
   res.render("aboutus");
 });
 
 
-module.exports = router;
+module.exports = router; 

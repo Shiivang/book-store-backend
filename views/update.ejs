@@ -10,7 +10,7 @@
 
     
 
-    <form action="/update" method="post" class="text-center w-50 m-auto p-5 rounded bg-secondary">
+    <form action="/update/<%= index %>" method="post" class="text-center w-50 m-auto p-5 rounded bg-secondary">
         <div  class="mb-3 m-auto ">
 
           <label for="enter book name" class="form-label">book name</label>
@@ -27,6 +27,7 @@
           class="form-control  form-control m-auto w-50"
           type="text"
           name="author"
+          value="<%= book.author %>"
       />
   
       <label for="Book Price" class="form-label">Book Price</label>
@@ -64,7 +65,7 @@
           id=""
           cols="30"
           rows="10"
-      ></textarea>
+      ><%= book.description %>"</textarea>
   
         </div>
         
