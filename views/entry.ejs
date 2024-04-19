@@ -8,8 +8,10 @@
         <button>add book</button>
     </form> -->
 
-    <form action="/create" method="post" class="text-center w-50 m-auto p-5 rounded bg-secondary">
+    <form action="/create" method="post" enctype="multipart/form-data" class="text-center w-50 m-auto p-5 rounded bg-secondary">
         <div  class="mb-3 m-auto ">
+
+            <input type="file" name="image" > <br>
 
           <label for="enter book name" class="form-label">enter book name</label>
           <input

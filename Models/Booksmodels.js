@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const booksmodels = new mongoose.Schema({
+    image:String,
     name: String ,
     author: String ,
     price: Number ,
@@ -13,4 +14,4 @@ const booksmodels = new mongoose.Schema({
 const Books = mongoose.model("book", booksmodels) ;
 
 module.exports = Books ;
- 
+   
